@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer } from "react";
 import {ChakraProvider} from "@chakra-ui/react";
 
 import HomeScreen from "./app/screens/Home"
@@ -8,7 +8,6 @@ import theme from "./theme";
 
 import "./theme.css";
 import {FavProductContextProvider, productReducer, inicialProductState} from "./context";
-import { Product } from "./product/types";
 
 const Application: React.FunctionComponent = () => {
 

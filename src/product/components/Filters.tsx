@@ -17,7 +17,6 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
     const [selected, setSelected] = React.useState<Product["title"] | null>(null);
     const favProductContext = useContext(FavProductContext); 
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const btnRef = React.useRef()
 
     return(
         <div style={{alignItems: "flex-start"}}>
@@ -78,6 +77,8 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
                                                     />
                                                 )
                                             }
+
+                                            return {};
                                         })}
                                     </Stack>
                                 :
