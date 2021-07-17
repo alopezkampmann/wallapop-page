@@ -19,7 +19,6 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return(
-        <div style={{alignItems: "flex-start"}}>
         <Stack direction="row" spacing={6}>
             <Text color="gray.500">Ordenado por:</Text>
             <Stack direction="row" spacing={4}>
@@ -55,7 +54,6 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
                     isOpen={isOpen}
                     size="sm"
                     scrollBehavior="outside"
-                    isCentered={true}
                 >
                     <ModalOverlay />
                     <ModalContent >
@@ -94,7 +92,6 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
                 </Modal>
             </Flex>
         </Stack>
-        </div>
     );
 };
 
