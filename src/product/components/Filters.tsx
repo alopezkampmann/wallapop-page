@@ -4,7 +4,6 @@ import {Filter} from "./types";
 import FavProductContext from "../../context";
 import FavCard from "./FavCard";
 import { Product } from "../types";
-import './Modal.scss';
 
 interface Props {
     active: Filter;
