@@ -16,6 +16,7 @@ describe('FavCard test', () =>  {
         const isSelected = false;
         const component = render(<FavCard product={products} isSelected={isSelected} />)
         expect(component.conteiner).toMatchSnapshot;
+        expect(component.getByTestId("favCard")).toBeInTheDocument;
     })
 
     it('renders FavCard correctly is selected true', () => {    
@@ -27,6 +28,7 @@ describe('FavCard test', () =>  {
     
         expect(getByTestId("removeFav")).toBeTruthy;
         expect(mockHandler.mock.calls).not.toHaveLength(1);
+        expect(getByTestId("favCardSelected")).toBeInTheDocument;
     })
 
     it('FavCard have products', () => {  

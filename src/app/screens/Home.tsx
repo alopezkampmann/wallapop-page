@@ -45,7 +45,7 @@ const HomeScreen: React.FC = () => {
 
     if( status === "pending") {
         return (
-            <Flex alignItems="center" justifyContent="center" padingY={12}>
+            <Flex alignItems="center" justifyContent="center" padingY={12} data-testid="progress">
                 <CircularProgress isIndeterminate color="primary.500"></CircularProgress>
             </Flex>
             

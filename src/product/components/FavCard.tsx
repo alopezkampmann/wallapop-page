@@ -14,7 +14,7 @@ const FavCard: React.FC<Props> = ({product, isSelected, ...props}) => {
     const favProductContext = useContext(FavProductContext); 
 
     return(
-        <Box {...props} backgroundColor="white" borderRadius="sm" boxShadow="sm" cursor="pointer" padding={6} position="relative"> 
+        <Box {...props} backgroundColor="white" borderRadius="sm" boxShadow="sm" cursor="pointer" padding={6} position="relative" data-testid="favCard"> 
             <Stack spacing={6} alignItems="center">
                 <Center>
                     <Image objectFit="cover" src={product.image} width={64} height={64} />
@@ -33,6 +33,7 @@ const FavCard: React.FC<Props> = ({product, isSelected, ...props}) => {
                         top={0}
                         width="100%"
                         zIndex={2}
+                        data-testid="favCardSelected"
                     >
                         <Box backgroundColor="red.500" borderRadius="sm" height="100%" left={0} opacity={0.9} position="absolute" top={0} width="100%" />
                         <Stack>
