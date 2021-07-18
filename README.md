@@ -14,7 +14,7 @@ Para ayudarme con el diseño se ha utilizado Chakra-Ui.
 Para correr la aplicación en forma local.
 Abre [http://localhost:3000](http://localhost:3000) para visualizarlo en el browser.
 
-URL de la aplicación porudcitva https://wallapop-page-deploy.vercel.app/
+URL de la aplicación porudcitva https://wallapop-page-app.vercel.app/
 
 ## Funcionalidades de la aplicación:
 
