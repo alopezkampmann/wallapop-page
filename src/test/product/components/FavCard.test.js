@@ -2,7 +2,7 @@
  * Module dependencies
  */
 const React = require('react');
-import {render, fireEvent} from '@testing-library/react'
+import {render, fireEvent, screen} from '@testing-library/react'
 import FavCard from '../../../product/components/FavCard';
 
 describe('FavCard test', () =>  {
@@ -18,8 +18,7 @@ describe('FavCard test', () =>  {
         expect(component.conteiner).toMatchSnapshot;
     })
 
-    it('renders FavCard correctly is selected true', () => {
-    
+    it('renders FavCard correctly is selected true', () => {    
         const isSelected = true;
         const mockHandler = jest.fn()
     
@@ -28,6 +27,11 @@ describe('FavCard test', () =>  {
     
         expect(getByTestId("removeFav")).toBeTruthy;
         expect(mockHandler.mock.calls).not.toHaveLength(1);
+    })
 
+    it('FavCard have products', () => {  
+        const isSelected = true;
+        render(<FavCard product={products} isSelected={isSelected} />  );
+        expect(screen.getByText("prodA")).toBeInTheDocument;
     })
 })

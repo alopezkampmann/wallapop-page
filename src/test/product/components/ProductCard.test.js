@@ -2,7 +2,7 @@
  * Module dependencies
  */
 const React = require('react');
-import {render, fireEvent} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import ProductCard from '../../../product/components/ProductCard';
 
 describe('ProductCard test', () =>  {
@@ -27,5 +27,11 @@ describe('ProductCard test', () =>  {
     
         expect(getByTestId("addFav")).toBeTruthy;
         expect(mockHandler.mock.calls).not.toHaveLength(1);
+    })
+
+    it('ProductCard have products', () => {  
+        const isSelected = true;
+        render(<ProductCard product={products} isSelected={isSelected} />  );
+        expect(screen.getByText("prodA")).toBeInTheDocument;
     })
 })

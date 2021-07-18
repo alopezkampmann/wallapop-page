@@ -85,7 +85,7 @@ const Grid: React.FC<Props> = ({products}) => {
     return(
         <Stack>
             <Stack 
-                alignItems="flex-start" 
+                alignItems="flex-start"
                 direction="row" 
                 divider={<Divider borderColor="gray.300" height={12} orientation="vertical" />}
                 flex={1} 

@@ -55,7 +55,7 @@ const HomeScreen: React.FC = () => {
     return (
         <Stack>
             <Stack alignItems="center" direction="row" spacing={3} width="100%">
-                <Input variant="outline" placeholder="Buscar categoría" size="lg" value={search} onChange={searchChange}/>
+                <Input variant="outline" placeholder="Buscar productos" size="lg" value={search} onChange={searchChange}/>
             </Stack>
             <Stack flex={1} spacing={1}>
                 <ProductList products={filteredProducts()} />

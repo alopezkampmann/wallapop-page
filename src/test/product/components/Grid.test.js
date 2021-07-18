@@ -2,7 +2,7 @@
  * Module dependencies
  */
 const React = require('react');
-import {render} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import Grid from '../../../product/components/Grid';
 
 describe('Grid test', () =>  {
@@ -27,5 +27,10 @@ describe('Grid test', () =>  {
     it('renders Grid correctly', () => {
         const component = render(<Grid products={products}/>)
         expect(component.conteiner).toMatchSnapshot;
+    })
+
+    it('Grid have products', () => {  
+        render(<Grid products={products} />  );
+        expect(screen.getByText("prodA")).toBeInTheDocument;
     })
 });

@@ -45,9 +45,10 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
                     paddingY={2}
                     paddingX={6}
                     onClick={onOpen}
+                    data-testid="Fav"
                     > Favoritos </Button>
             </Stack>
-            <Flex alignItems="flex-start">
+            <Flex >
                 <Modal
                     onClose={onClose}
                     isOpen={isOpen}
@@ -58,7 +59,7 @@ const Filters: React.FC<Props> = ({onChange, active}) => {
                     <ModalContent >
                         <ModalHeader>Articulos Favoritos</ModalHeader>
                         <ModalCloseButton />
-                            <ChakraGrid gap={6}>
+                            <ChakraGrid gap={6} >
                                 {Object.keys(favProductContext.productState.products).length > 0 ?
                                     <Stack>
                                         {Object.keys(favProductContext.productState.products).map((value, index) => {
